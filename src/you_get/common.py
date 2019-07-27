@@ -792,10 +792,11 @@ class SimpleProgressBar:
         total_str_width = max(len(total_str), 5)
         self.bar_size = self.term_size - 28 - 2 * total_pieces_len \
             - 2 * total_str_width
-        self.bar = '{:>4}%% ({:>%s}/%sMB) ├{:─<%s}┤[{:>%s}/{:>%s}] {}' % (
-            total_str_width, total_str, self.bar_size, total_pieces_len,
-            total_pieces_len
-        )
+        # self.bar = '{:>4}%% ({:>%s}/%sMB) ├{:─<%s}┤[{:>%s}/{:>%s}] {}' % (
+        #     total_str_width, total_str, self.bar_size, total_pieces_len,
+        #     total_pieces_len
+        # )
+        self.bar = '{}{}{}{}{}{}'
 
     def update(self):
         self.displayed = True
